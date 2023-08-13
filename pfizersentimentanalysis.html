@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="contact.html">About me</a></li>
+							<li><a href="elements.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 13, 2023</span>
+									<h1>Pfizer Vaccine Sentiment Analysis</h1>
+									<p style="text-align: justify;">Sentiment analysis on the Pfizer vaccine involves evaluating the opinions, emotions, and attitudes expressed in texts such as comments, tweets, news articles, etc., regarding the Pfizer vaccine. This analysis aims to understand the overall public perception of the vaccine and identify positive, negative, or neutral opinions associated with it.
+
+									<p style="text-align: justify;">The general steps to perform sentiment analysis on the Pfizer vaccine are as follows:</p>
+										
+									<p style="text-align: justify;">1- Data collection: Gather a relevant set of texts related to the Pfizer vaccine, such as tweets, online comments, news articles, discussion forums, etc.</p>
+										
+									<p style="text-align: justify;">2- Data preprocessing: Clean and prepare the data by removing unwanted characters, links, hashtags, mentions, stopwords, etc. Also, perform normalization operations such as converting to lowercase and removing duplicates.</p>
+										
+									<p style="text-align: justify;">3- Sentiment analysis: Apply a sentiment analysis method to evaluate the emotional tone of the texts. This can be done using techniques based on lexicons, supervised classification models, machine learning, natural language processing (NLP), etc.</p>
+										
+									<p style="text-align: justify;">4- Sentiment classification: Classify the texts based on their polarity, i.e., determine whether they express a positive, negative, or neutral sentiment towards the Pfizer vaccine.</p>
+										
+									<p style="text-align: justify;">5- Visualization of results: Present the results in a visual manner, such as through charts or tables, to better understand the distribution of sentiments and overall trends.</p>
+										
+									<p style="text-align: justify;">6- Analysis of results: Interpret the obtained results, identify dominant opinions and trends, detect issues or concerns raised by users, and propose recommendations or actions based on this information.</p>
+										
+									<p style="text-align: justify;">Sentiment analysis on the Pfizer vaccine can provide valuable insights to vaccine manufacturers, policymakers, healthcare professionals, and researchers to understand public perception, evaluate the effectiveness of communication campaigns, and make informed decisions to enhance trust and acceptance of the vaccine.</p>
+								</header>
+								<div class="image main"><img src="images/pic07.jpg" alt="" /></div>
+								<ul class="actions special">
+									<li><a href="https://github.com/nadiajamaleddine/Pfizer-Vaccine-Sentiment-Analysis/blob/main/vaccine_tweets.csv" class="button">Dataset</a></li>
+								</ul>
+								<p>1- Let’s start the task of Pfizer vaccine sentiment analysis by importing the necessary Python libraries and the dataset:</p>
+								<div class="image main"><img src="images/pic07-1.jpg" alt="" /></div>
+								<p>2- Let's explore our dataset:</p>
+								<div class="image main"><img src="images/pic07-2.jpg" alt="" /></div>
+								<p>3- Let’s have a look at whether it contains any null values or not:: </p>
+								<div class="image main"><img src="images/pic07-3.jpg" alt="" /></div>
+								<p>4-  We will delete rows containing null values because the dataset is very large, even though these null values do not affect the sentiment analysis task.:</p>
+								<div class="image main"><img src="images/pic07-4.jpg" alt="" /></div>
+								<p>5- Now we look at the descriptive statistics of this data set:</p>
+								<div class="image main"><img src="images/pic07-5.jpg" alt="" /></div>
+								<p>6- We're going to focus on The Text Column because it contains Twitter users' opinions on Pfizer's vaccine. We'll start by cleaning it up:</p>
+								<div class="image main"><img src="images/pic07-6.jpg" alt="" /></div>
+								<p>7- Now we will identify the most frequent or most important words in a given data set by a word cloud:</p>
+								<div class="image main"><img src="images/pic07.jpg" alt="" /></div>
+								<p>Now we look at the hashtags column to identify the type of tags that were trending when people were sharing their opinions on the Pfizer vaccine:</p>
+								<div class="image main"><img src="images/pic07-7.jpg" alt="" /></div>
+								<p>Let's look at the "user_verified" column the number of verified users who have shared their opinions on the Pfizer vaccine:</p>
+								<div class="image main"><img src="images/pic07-8.jpg" alt="" /></div>
+								<p> False shows the number of unverified users and True shows the number of verified users.</p>
+								<p>to complete the Pfizer vaccine sentiment analysis task. we will add three more columns like Positive, Negative and Neutral by calculating the sentiment scores of the text column:</p>
+								<div class="image main"><img src="images/pic07-9.jpg" alt="" /></div>
+								<p>What did most people think of Pfizer's vaccine?</p>
+								<div class="image main"><img src="images/pic07-10.jpg" alt="" /></div>
+								<p> Most of the users' opinions were neutral, now let's see the total of each sentiment score:</p>
+								<div class="image main"><img src="images/pic07-11.jpg" alt="" /></div>
+								<p>We can see that the discussion among Twitter users was about raising awareness of Pfizer's vaccine rather than sharing its benefits or drawbacks given the scores.</p>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

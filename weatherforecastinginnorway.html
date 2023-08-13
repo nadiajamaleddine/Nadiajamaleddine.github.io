@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="contact.html">About me</a></li>
+							<li><a href="elements.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 14, 2023</span>
+									<h1>Weather forecasting in Norway</h1>
+									<p style="text-align: justify;">TWeather forecasts play a crucial role in our daily lives, whether it's planning outdoor activities, making agricultural decisions, or even predicting long-term climate conditions. With the advancement of technology and the rise of machine learning, it has become possible to create accurate and reliable weather prediction models. In this article, we will explore how to use Python, a popular programming language, to perform weather forecasting using machine learning techniques.</p>
+									<p style="text-align: justify;">Python offers powerful libraries and frameworks for manipulating weather data, performing statistical analysis, and building predictive models. By combining historical weather datasets with machine learning algorithms, we can develop models that can capture weather trends and patterns, providing accurate forecasts for the future.</p>
+									<p style="text-align: justify;">In this article, we will focus on using Python to create a weather forecasting model using recurrent neural networks (RNNs) or convolutional neural networks (CNNs). These models are capable of considering the temporal dependencies in weather data and learning to predict future weather conditions.</p>
+									<p style="text-align: justify;">We will start by collecting weather data from sources such as local weather stations, satellites, or online databases. Next, we will use Python libraries such as Pandas for data preprocessing, NumPy for numerical operations, and TensorFlow or Keras for building and training our weather prediction models.</p>
+									<p style="text-align: justify;">Finally, we will evaluate the performance of our models by comparing the forecasts to real data, and discuss different techniques for model improvement and calibration. With Python and machine learning techniques, we will be able to provide accurate and useful weather forecasts for better activity planning and informed decision-making based on upcoming weather conditions.</p>
+									<p style="text-align: justify;">Are you ready to dive into the fascinating world of weather forecasting using Python? Follow this step-by-step guide to discover how to harness the power of machine learning to anticipate climate changes and obtain accurate weather insights.</p>
+									<p style="text-align: justify;">Weather logs are from 55 meteorological stations across Norway dated from 01-01-2010 to 31-12-2021. Columns include Station id and coordinates, splitted date and various observations such as max and mean air temperature for the specific day, max and mean wind speed for the specific day, max and mean relative humidity for the specific day and sum of precipitation for the specific day. Some values can be NaN since most of the stations record only some of the mentioned metrics. </p>
+								</header>
+								<div class="image main"><img src="images/pic04-0.png" alt="" /></div>
+								<ul class="actions special">
+									<li><a href="https://www.kaggle.com/datasets/annbengardt/noway-meteorological-data?select=NorwayMeteoDataCompleted.csv" class="button">Dataset</a></li>
+								</ul>
+								<p>I will start this task by importing the necessary Python libraries and the dataset:</p>
+								<div class="image main"><img src="images/pic04-1.jpg" alt="" /></div>
+								<p>The most important columns for our project are:</p>
+								<div class="image main"><img src="images/pic04-2.jpg" alt="" /></div>
+								<p>Let's explore our new database: </p>
+								<p>The dataset contains many missing values, we will start by deleting them and then we will reset index</p>
+								<div class="image main"><img src="images/pic04-3.jpg" alt="" /></div>
+								<p>filter the dataset on sourceId having the highest datapoints</p>
+								<div class="image main"><img src="images/pic04-4.jpg" alt="" /></div>
+								<p>We reset the index again:</p>
+								<div class="image main"><img src="images/pic04-5.jpg" alt="" /></div>
+								<p>Let’s have a look at the mean temperature in Norway over the years:</p>
+								<div class="image main"><img src="images/pic04-7.jpg" alt="" /></div>
+								<div class="image main"><img src="images/pic04-6.jpg" alt="" /></div>
+								<div class="image main"><img src="images/pic04-9.jpg" alt="" /></div>
+								<p>Here’s how we can change the data type :</p>
+								<div class="image main"><img src="images/pic04-9-1.jpg" alt="" /></div>
+								<p>for weather forecasting. we will use the Facebook prophet model. The Facebook prophet model is one of the best time series forecasting techniques. </p>
+								<p>The prophet model accepts time data named as “ds”, and labels as “y”. So let’s convert the data into this format:</p>
+								<div class="image main"><img src="images/pic04-9-2.jpg" alt="" /></div>
+								<p>Now below is how we can use the Facebook prophet model for weather forecasting using Python:</p>
+								<div class="image main"><img src="images/pic04-9-3.jpg" alt="" /></div>
+								<div class="image main"><img src="images/pic04-10.jpg" alt="" /></div>
+								<div class="image main"><img src="images/pic04-11.jpg" alt="" /></div>
+							
+								<p>Weather forecasting is the task of forecasting weather conditions for a given location and time. With the use of weather data and algorithms, it is possible to predict weather conditions for the next n number of days.</p>
+								
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

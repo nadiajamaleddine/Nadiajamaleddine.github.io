@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="contact.html">About me</a></li>
+							<li><a href="elements.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 13, 2023</span>
+									<h1>gold price prediction</h1>
+									<p style="text-align: justify;">The prediction of gold prices has always been of great interest to investors, economists, and financial analysts. As gold is considered a safe haven asset and is known for its value preservation, understanding and forecasting its price movements can provide valuable insights for decision-making.</p>
+									<p style="text-align: justify;">One popular approach for predicting gold prices is through linear regression analysis. Linear regression is a statistical modeling technique that seeks to establish a relationship between a dependent variable (in this case, gold prices) and one or more independent variables (such as economic indicators, market factors, or historical data). By fitting a linear equation to the available data points, we can estimate the future price of gold based on the relationship observed in the historical data.</p>
+									<p style="text-align: justify;">The regression model considers various factors that may influence gold prices, such as inflation rates, interest rates, stock market performance, geopolitical events, and demand-supply dynamics. By analyzing these factors and their impact on gold prices, we can build a regression model that captures the underlying trends and patterns in the data.</p>
+									<p style="text-align: justify;">The goal of predicting gold prices using linear regression is to provide insights into potential price movements, identify buying or selling opportunities, and assess the risk associated with gold investments. However, it's important to note that no prediction model can guarantee accurate results, as gold prices are influenced by a multitude of complex and interrelated factors.</p>
+									<p style="text-align: justify;">In this project, we will explore the application of linear regression in predicting gold prices. We will gather historical data, select relevant independent variables, build a regression model, evaluate its performance, and use it to forecast future gold prices. By understanding the principles of linear regression and applying them to the context of gold price prediction, we aim to gain valuable insights into this fascinating and dynamic market.</p>
+									<p style="text-align: justify;">Disclaimer: The predictions and analysis provided in this project are for informational purposes only and should not be considered as financial advice. The gold market is subject to inherent risks and uncertainties, and it is recommended to consult with a professional financial advisor before making any investment decisions.</p>
+								</header>
+								<div class="image main"><img src="images/pic02.jpg" alt="" /></div>
+								<ul class="actions special">
+									<li><a href="https://github.com/nadiajamaleddine/gold_price_prediction/blob/main/gold_price.csv" class="button">Dataset</a></li>
+								</ul>
+								<p>1- I will start the task of Gold price prediction by importing the necessary Python libraries and the dataset:</p>
+								<div class="image main"><img src="images/pic02-1.jpg" alt="" /></div>
+								<p>2- Let's explore our dataset:</p>
+								<div class="image main"><img src="images/pic02-2.jpg" alt="" /></div>
+								<p>3- We create new feature: </p>
+								<p>Calculate the returns of the column 'EURO (PM)' and store them in a new column called 'Return'.</p>
+								<p>We will use the .pct_change() method to perform analyses on yields or relative variations in the data. It allows you to easily calculate percentage changes and identify trends or significant changes in the data.</p>
+								<p>When applied to a column of a DataFrame, the .pct_change() method calculates the percentage change between each value and the previous value. It returns a column that contains the percentage changes. The first value in the  column will usually be NaN (Not Available) because there is no previous value to calculate the change.</p>
+								<p>The values in the "Return" column are shifted up one place. This means that the value of each row is replaced by the value of the previous row, while the first row takes the value NaN (missing value) because there is no previous row and store them in a new column called 'Lagged_Return'.</p>
+								<div class="image main"><img src="images/pic02-3.jpg" alt="" /></div>
+								<p>4- Count the number of null values in each column and delete rows containing null values:</p>
+								<div class="image main"><img src="images/pic02-4.jpg" alt="" /></div>
+								<p>5- Using Linear Regression Model:</p>
+								<p>Now as we have prepared the data to fit in a machine learning model for the task of gold price prediction, the next step is to choose a machine learning algorithm. The Linear Regression algorithm is used:</p>
+								<div class="image main"><img src="images/pic02-5.jpg" alt="" /></div>
+								<p>Now let’s plot the results of gold price prediction that we got from the linear regression algorithm:</p>
+								<div class="image main"><img src="images/pic02-6.jpg" alt="" /></div>
+								<p>This was a machine learning tutorial on gold price prediction with Python using linear regression.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="contact.html">About me</a></li>
+							<li><a href="elements.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 13, 2023</span>
+									<h1>FACIAL RECOGNITION WITH PYTHON</h1>
+									<p style="text-align: justify;">Facial detection and recognition is one of the areas of computer vision where research is actively being conducted.</p>
+									<p style="text-align: justify;">Applications of facial recognition include facial unlocking, security and defense, etc. Doctors and health officials use facial recognition to access medical records and patient histories and better diagnose diseases.</p>
+									<p style="text-align: justify;">In this python project, we will build a machine learning model that recognizes people from an image. We use the face_recognition API and OpenCV in our project.</p>
+									<p style="text-align: justify;">Before we proceed, let's look at facial recognition and detection.
+									Facial recognition is the process of identifying or verifying a person's face from photos and video frames.
+									Face detection is defined as the process of locating and extracting faces (location and size) in an image for use by a face detection algorithm.
+									The face recognition method is used to locate uniquely specified entities in the image. The facial image has already been removed, cropped, scaled and converted to grayscale in most cases. Facial recognition involves 3 steps: face detection, feature extraction, facial recognition.</p>
+								</header>
+								<div class="image main"><img src="images/pic06.jpg" alt="" /></div>
+								<ul class="actions special">
+									<li><a href="https://github.com/nadiajamaleddine/Facial_Recognition" class="button">Dataset</a></li>
+								</ul>
+								<p>1- Prepare the data set:
+									Create 2 directories, train and test. Choose an image for each of the French government members from the Internet and upload it to our "train" directory. Make sure that the images you have selected show the facial features well enough for the classifier.
+									To test the model, let's take a photo containing the entire cast and place it in our "test" directory.</p>
+								<P>2- Train the model:
+									First import the necessary modules:</P>
+								<div class="image main"><img src="images/pic06-1.jpg" alt="" /></div>
+								<p>The face_recognition library contains the implementation of various utilities that help in the face recognition process.</p>
+								<p>Now create 2 lists that store the names of the images (people) and their respective face encodings.</p>
+								<div class="image main"><img src="images/pic06-2.jpg" alt="" /></div>
+								<p>Face encoding is a vector of values representing important measurements between distinctive features of a face such as distance between eyes, width of forehead, etc.</p>
+								<p>We loop through each of the images in our train directory, extract the name of the person in the image, compute their face encoding vector and store the information in the respective lists.</p>
+								<div class="image main"><img src="images/pic06-3.jpg" alt="" /></div>
+								<p>3- Test the model on the test data set:</p>
+								<p>As mentioned above, our test dataset contains only 1 image with all the people in it.</p>
+								<div class="image main"><img src="images/pic06-4.jpg" alt="" /></div>
+								<p>The face_recognition library provides a useful method called face_locations() that locates the coordinates (left, bottom, right, top) of each face detected in the image. Using these location values, we can easily find the face encodings.</p>
+								<div class="image main"><img src="images/pic06-5.jpg" alt="" /></div>
+								<p>We loop through each of the face locations and its encoding found in the image. Then we compare this encoding with the encodings of the faces in the "train" dataset.</p>
+								<p>Then compute the face distance, which means that we compute the similarity between the encoding of the test image and the encoding of the train images. Now, we choose the minimum distance valued from it indicating that this face of the test image is one of the people in the training dataset.</p>
+								<p>Now draw a rectangle with the location coordinates of the face using the methods in the cv2 module.</p>
+								<div class="image main"><img src="images/pic06-6.jpg" alt="" /></div>
+								<p>Display the image using the imshow() method of the cv2 module. Save it to our current working directory using the imwrite() method
+									cv2.imwrite("./output.jpg", image).and free the resources that have not been deallocated (if any).</p>
+								<div class="image main"><img src="images/pic06-7.jpg" alt="" /></div>
+								<p>Let's see the output of the model.</p>
+								<div class="image main"><img src="images/pic06-8.jpg" alt="" /></div>
+								<p>In this machine learning project, we developed a facial recognition model in python and opencv using our own custom dataset.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#">
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

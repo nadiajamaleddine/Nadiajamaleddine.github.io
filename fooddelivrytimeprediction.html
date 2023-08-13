@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Generic Page - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Projects</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="projects.html">Projects</a></li>
+							<li><a href="contact.html">Contact</a></li>
+							<li><a href="elements.html">About me</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<span class="date">May 18, 2023</span>
+									<h1>FOOD DELIVERY TIME PREDICTION</h1>
+									<p style="text-align: justify;">Predicting the delivery time of food is a critical aspect of the restaurant and food delivery industry. It involves accurately forecasting the time it will take for an ordered meal to be delivered to the customer, taking into account various factors such as food preparation, distance, and traffic conditions.</p>
+									<p style="text-align: justify;">This forecasting task presents unique challenges due to the dynamic nature of the restaurant industry, where many external factors can influence delivery time, such as order volume, unexpected delays, or weather conditions.</p>
+									<p style="text-align: justify;">To achieve accurate predictions, it is necessary to collect and analyze relevant data, such as food preparation schedules, historical travel times, location data, and weather data. By using advanced modeling techniques such as linear regression, time series methods, or machine learning algorithms, predictive models can be created to estimate delivery time with a certain level of accuracy.</p>
+									<p style="text-align: justify;">Predicting food delivery time offers several benefits for restaurants and delivery services. It enhances the customer experience by providing more accurate estimations, reducing wait times and frustration. Additionally, it helps establishments optimize their operations by adjusting food preparation and delivery logistics planning to improve efficiency and minimize delays.</p>
+									<p style="text-align: justify;">In summary, predicting food delivery time is a growing field that aims to enhance efficiency and customer satisfaction in the restaurant and food delivery industry. By leveraging data and appropriate modeling techniques, reliable estimates of delivery time can be obtained, contributing to an overall better experience for customers and businesses in the sector.</p>
+								</header>
+								<div class="image main"><img src="images/pic08.jpg" alt="" /></div>
+								<p>To predict the time of food delivery in real time, we need to compute the distance from the point of food preparation to the point of food consumption and find relationships between the time taken by delivery partners to deliver food in the past for the same distance.</p>
+								<ul class="actions special">
+									<li><a href="https://statso.io/food-delivery-time-prediction-case-study/" class="button">Dataset</a></li>
+								</ul>
+								<p>1- I will start this task by importing the necessary Python libraries and the dataset:</p>
+								<div class="image main"><img src="images/pic08-1.jpg" alt="" /></div>
+								<p>2- Let's explore our dataset:</p>
+								<div class="image main"><img src="images/pic08-2.jpg" alt="" /></div>
+								<p>The dataset does not have any null values.</p>
+								<p>3- We create new feature: </p>
+								<p>With the latitude and longitude points of the restaurant and the delivery location, we can calculate the distance between these two locations using the Haversine formula. </p>
+								<div class="image main"><img src="images/pic08-3.jpg" alt="" /></div>
+								<p> a new feature has been added to the dataset as distance. Let's look at the dataset again:</p>
+								<div class="image main"><img src="images/pic08-4.jpg" alt="" /></div>
+								<p>4-Visualisation:</p>
+								<p>we will examine the relationship between the distance and the time needed to deliver the food:</p>
+								<div class="image main"><img src="images/pic08-5.jpg" alt="" /></div>
+								<p> Most delivery partners deliver food within 25 to 30 minutes, so there is a consistent relationship between the time taken and the distance traveled to deliver the food. </p>
+								<p>Is there a relationship between the time it takes to deliver the food and the age of the delivery partner?</p>
+								<div class="image main"><img src="images/pic08-6.jpg" alt="" /></div>
+								<p>Younger delivery partners take less time to deliver food than older partners, suggesting a linear relationship between time to deliver food and delivery partner age. </p>
+								<p>Is there a relationship between the time it takes to deliver the food and the delivery partner's ratings?</p>
+								<div class="image main"><img src="images/pic08-7.jpg" alt="" /></div>
+								<p> Delivery partners with higher ratings take less time to deliver food compared to partners with lower ratings, resulting in an inverse linear relationship between the time to deliver food and delivery partner ratings.</p>
+								<p>Now let’s have a look if the type of food ordered by the customer and the type of vehicle used by the delivery partner affects the delivery time or not:</p>
+								<div class="image main"><img src="images/pic08-8.jpg" alt="" /></div>
+								<p>The difference between the time taken by delivery partners depending on the vehicle they drive and the type of food they deliver is not very significant.</p>
+								<p>We focus on the characteristics that contribute the most to food delivery time, which are: Age of delivery partner, Rating of delivery partner and Distance from the restaurant to the delivery location</p>
+								<p>5- Using LSTM neural network Model:</p>
+								<p> We choose to Train the LSTM neural network model for the food delivery time prediction task:</p>
+								<div class="image main"><img src="images/pic08-9.jpg" alt="" /></div>
+								<div class="image main"><img src="images/pic08-10.jpg" alt="" /></div>
+								Now let’s test the performance of our model by giving inputs to predict the food delivery time:
+								<div class="image main"><img src="images/pic08-11.jpg" alt="" /></div>
+								<p>Then for a 25 years old deliveryman who travels a Distance of 4 kilometers and who has the note 6 as ratings put 17 min to deliver his order.</p>
+							</section>
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<section>
+							<form method="post" action="#"></form>
+								<div class="fields">
+									<div class="field">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
+									</div>
+									<div class="field">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="3"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" /></li>
+								</ul>
+							</form>
+						</section>
+						<section class="split contact">
+							<section class="alt">
+								<h3>Address</h3>
+								<p>1234 Somewhere Road #87257<br />
+								Nashville, TN 00000-0000</p>
+							</section>
+							<section>
+								<h3>Phone</h3>
+								<p><a href="#">(000) 000-0000</a></p>
+							</section>
+							<section>
+								<h3>Email</h3>
+								<p><a href="#">info@untitled.tld</a></p>
+							</section>
+							<section>
+								<h3>Social</h3>
+								<ul class="icons alt">
+									<li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</section>
+						</section>
+					</footer>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
